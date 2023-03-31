@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 router.get('/statistics', async (_req, res) => {
   const todos = await getAsync('todos');
   res.send({
-    added_todos: todos,
+    added_todos: todos || 0,
   });
 });
 
