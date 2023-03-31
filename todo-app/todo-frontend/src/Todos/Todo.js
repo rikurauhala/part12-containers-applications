@@ -3,7 +3,9 @@ const Todo = ({ onClickComplete, onClickDelete, todo }) => {
     <>
       <span>This todo is done</span>
       <span>
-        <button onClick={onClickDelete(todo)}> Delete </button>
+        <button onClick={onClickDelete(todo)}>
+          Delete
+        </button>
       </span>
     </>
   );
@@ -11,11 +13,15 @@ const Todo = ({ onClickComplete, onClickDelete, todo }) => {
   const notDoneInfo = (
     <>
       <span>
-         This todo is not done
+        This todo is not done
       </span>
       <span>
-        <button onClick={onClickDelete(todo)}> Delete </button>
-        <button onClick={onClickComplete(todo)}> Set as done </button>
+        <button class="delete-button" onClick={onClickDelete(todo)}>
+          Delete
+        </button>
+        <button onClick={onClickComplete(todo)}>
+          Set as done
+        </button>
       </span>
     </>
   );
